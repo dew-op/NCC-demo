@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NCC-IITR</title>
+  <!-- ----Favicon----- -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <!-- ----hamburgers.min.css--- -->
+  <link rel="stylesheet" href="./css/hamburgers.min.css">
+  <!-- Custom CSS Link  -->
+  <link rel="stylesheet" href="./css/globalStyle.css">
+  <link rel="stylesheet" href="./css/nav&footer.css">
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body onload="load()">
+  <div id="loading">
+  </div>
+  <!-- -----------NavBar Start---------- -->
+  <div class="fixed-top">
+    <div class="container-fluid navBar">
+      <div class="row ncc-navBar">
+        <div class="NCC-Logo">
+          <a href="./index.html">
+            <img src="./images/NCC Logo.png" alt="NCC Logo" id="NCC-Logo" />
+          </a>
+        </div>
+        <div class="col-10" style="width: 85%;" id="navbar_links">
+          <div class="pt-3 navItem" id="ncc-heading">
+            <p class="heading-ncc-hn">नेशनल कैडेट कोर</p>
+            <p class="heading-ncc-en">National Cadet Corps, IIT Roorkee</p>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-dark navLinks py-0 box">
+            <div class="container p-0 m-0">
+              <div class="navbar-collapse">
+                <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./aboutUs.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./events.html">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./allBlog.html">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./FAQs.html">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./annualReport.html">Annual Reports</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="IITR-Logo">
+          <a href="https://iitr.ac.in/"><img src="./images/IITR Logo.png" alt="IITR logo" id="IITR-Logo" /></a>
+        </div>
+        <div class="toggle-icon d-none navItem">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box ">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile View -->
+    <nav class="navbar navbar-expand-lg navbar-dark navLinks py-0 box" id="nav-mb">
+      <div class="container">
+        <div class="navbar-collapse">
+          <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutUs.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./allBlog.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./FAQs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./annualReport.html">Annual Reports</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- -----------NavBar End---------- -->
+
+  <!---------- carousel start------- -->
+  <div id="carouselExampleIndicators" class="carousel slide carousel-home" data-bs-ride="carousel">
+    <!-- <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div> -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/carousel.jpg" class="d-block w-100" alt="image-1" style="margin-top: 0px;">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel2.jpg" class="d-block w-100" alt="image-2" style="margin-top: 0px;">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel3.jpg" class="d-block w-100" alt="image-3" style="margin-top: 0px;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!---------- carousel end------- -->
+  <!-- Aim part-->
+  <div class="Our_AIM">
+    <!-- <div class="aim">
+      <p class="aim-pledge-heading" style="font-size: 32px;">
+        Our AIM</p>
+    </div> -->
+    <div class="section-heading text-center d-flex align-items-center justify-content-around py-3">
+      <div class="line"></div>
+      <p class="heading">Our AIM</p>
+      <div class="line"></div>
+    </div>
+    <div class="flex-container">
+      <img class="pics" src="./images/Aim.jpg" alt="Flag" style="position: relative;">
+      <div class="text" style="font-weight: 400; ">
+        <p>The Aims of the NCC laid out in 1988 have stood the test of time and continue to meet the
+          requirements expected of it in the current socio–economic scenario of the country.
+        <ul>
+          <li> To Create a Human Resource of Organized, Trained and Motivated Youth, To Provide Leadership in
+            all Walks of life and be Always Available for the Service of the Nation.</li>
+          <li>To Provide a Suitable Environment to Motivate the Youth to Take Up a Career in the Armed Forces.
+          </li>
+          <li>To Develop Character, Comradeship, Discipline, Leadership, Secular Outlook, Spirit of Adventure,
+            and Ideals of Selfless Service amongst the Youth of the Country.</li>
+        </ul>
+        </p>
+        <Div class="reference">
+          <p>Source: <a href="http://indiancc.nic.in/aim-of-ncc/">indiancc.nic.in/aim-of-ncc/ </a></p>
+        </Div>
+      </div>
+    </div>
+
+  </div>
+  <!--Pledge part-->
+  <div class="Pledge">
+    <!-- <div class="pldge">
+      <p class="aim-pledge-heading">
+        Our Pledge
+      </p>
+    </div> -->
+    <div class="section-heading text-center d-flex align-items-center justify-content-around py-3">
+      <div class="line"></div>
+      <p class="heading">Our Pledge</p>
+      <div class="line"></div>
+    </div>
+    <div class="flex-container">
+      <img class="pics" src="./images/Pledge.png" alt="Pledge" style="position: relative;">
+      <div class="text">
+        <p>We the cadets of the National Cadet Corps, do solemnly pledge that we shall always uphold the unity
+          of India. We resolve to be disciplined and responsible citizens of our nation. We shall undertake
+          positive community service in the spirit of selflessness and concern for our fellow beings.</p>
+        <Div class="reference">
+          <p>Source: <a href="http://indiancc.nic.in/pledge/">indiancc.nic.in/pledge/</a></p>
+        </Div>
+      </div>
+    </div>
+  </div>
+  <div class="ncc-song">
+    <!-- <div class="pldge mb-2">
+      <p class="aim-pledge-heading"><a href="https://www.youtube.com/watch?v=K2faLjlM8iY" target="_blank"
+          style="text-decoration: none; color: #fff;">
+          NCC Song</a>
+      </p>
+    </div> -->
+    <div class="section-heading text-center d-flex align-items-center justify-content-around py-3">
+      <div class="line"></div>
+      <p class="heading"><a href="https://www.youtube.com/watch?v=K2faLjlM8iY" target="_blank"
+        style="text-decoration: none; color: #212529;">
+        NCC Song</a></p>
+      <div class="line"></div>
+    </div>
+    <p class="text-center song_text">
+      Hum Sab Bharatiya Hain, Hum Sab Bharatiya Hain<br> Apni Manzil Ek Hai,<br> Ha, Ha, Ha, Ek Hai,<br>
+      Ho, Ho, Ho, Ek Hai.<br> Hum Sab Bharatiya Hain.<br>
+      <br> Kashmir Ki Dharti Rani Hai,<br> Sartaj Himalaya Hai,<br> Saadiyon Se Humne Isko Apne Khoon Se
+      Pala Hai<br> Desh Ki Raksha Ki Khatir Hum Shamshir Utha Lenge,<br> Hum Shamshir Utha Lenge.<br>
+      <br> Bikhre Bikhre Taare Hain Hum Lekin Jhilmil Ek Hai,<br> Ha, Ha, Ha, Ek Hai<br> Hum Sab Bharatiya
+      Hai.<br> Mandir Gurudwaare Bhi Hain Yahan<br> Aur Masjid Bhi Hai Yahan<br> Girija Ka Hai Ghariyaal
+      Kahin<br> Mullah ki Kahin Hai Ajaan<br>
+      <br> Ek Hee Apna Ram Hain, Ek hi Allah Taala Hai,<br> Ek Hee Allah Taala Hain, Raang Birange Deepak
+      Hain Hum,<br> lekin Jagmag Ek Hai, Ha Ha Ha Ek Hai, Ho Ho Ho Ek Hai.<br> Hum Sab Bharatiya Hain, Hum
+      Sab Bharatiya Hain.
+    </p>
+    <Div class="reference">
+      <p style="margin-right: 55px; padding-bottom: 30px;">Source: <a
+          href="http://indiancc.nic.in/ncc-song-lyrics/">indiancc.nic.in/ncc-song-lyrics/</a></p>
+    </Div>
+  </div>
+  </div>
+  <!-- Footer Starts -->
+  <div class="ncc-bg-blue ncc-white">
+    <div class="row mx-0 ">
+
+      <!-- Normal Footer -->
+
+      <div class="py-2 d-flex justify-content-between footerResponsive text-left">
+        <div class="d-flex flex-column text-left  px-2 element px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Contact Us:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <img src="images/svgs/phoneIcon.svg" />
+            <div class="px-2">
+              <p id="content" class="m-0 pb-1">
+                +91 9302286449
+                
+              </p>
+              <p id="content" class="pb-1 m-0">
+                +91 8178818593
+              
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center pt-2">
+            <img src="images/svgs/emailIcon.svg" />
+            <div class="px-3">
+              <p id="content" class="m-0 pb-1">
+                <a href="mailto:ncc@iitr.ac.in" class=" text-white text-decoration-none">ncc@iitr.ac.in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left   px-2element  px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Social Media:
+          </span>
+          <div class="d-flex align-items-center justify-content-between pt-4">
+            <a target="_blank" id="logo1" href="https://www.facebook.com/ncc.iitr"><img
+                src="images/svgs/facebookIcon.svg" class="me-2" /></a>
+            <a target="_blank" id="logo2" href="https://www.youtube.com/channel/UCrx5OBkbdv5dldJBDXFfJbA"><img
+                src="images/svgs/youtubeIcon.svg" class="me-2" /></a>
+            <a target="_blank" id="logo3" href="https://www.instagram.com/ncc.iitr/"><img
+                src="images/svgs/instagram.png" class="me-2" width="44px" height="44px" /></a>
+            <a target="_blank" id="logo4" href="https://goo.gl/maps/73UGFeqZSd5HjjZP9"><img
+                src="images/svgs/maps.png" class="me-2" width="44px" height="44px" /></a>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left ele  px-2ment iit px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Website:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+            <div>
+              <a href="https://indiancc.nic.in/" target="_blank" id="content" class="text-decoration-none text-white">
+                NCC Official
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center pt-2">
+            <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+            <div>
+              <a href="https://www.iitr.ac.in/" target="_blank" id="content" class="m-0 pb-1">
+                IIT Roorkee
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="d-flex flex-column text-left element ">
+          <span id="title_footer" class="pb-1">
+            Address:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <p id="content" class="m-0 pb-1 address">
+              3 UK CTR NCC, IIT Roorkee Roorkee, Haridwar Uttarakhand, 247667
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Footer -->
+
+      <div class="py-2 d-flex flex-column footerResponsive1 text-left">
+        <div id="footer_heading" class="d-flex flex-column text-left px-4 element">
+          <h2>National Cadet Corps</h2>
+          <h4>IIT Roorkee</h4>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Contact Us:
+            </div>
+            <i class="fa fa-plus" onclick="footer('contact_content',this)"></i>
+          </div>
+          <div id="contact_content">
+            <div class="d-flex align-items-center pt-3">
+              <img src="images/svgs/phoneIcon.svg" />
+              <div class="px-2">
+                <p id="content" class="m-0 pb-1">
+                  +91 7070091863
+                </p>
+                <p id="content" class="pb-1 m-0">
+                  +91 8449643710
+                </p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center pt-2">
+              <img src="images/svgs/emailIcon.svg" />
+              <div class="px-3">
+                <p id="content" class="m-0 pb-1">
+                  <a href="mailto:ncc@iitr.ac.in" class="text-white text-decoration-none">ncc@iitr.ac.in</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Address:
+            </div>
+            <i class="fa fa-plus" onclick="footer('address_content',this)"></i>
+          </div>
+          <div id="address_content">
+            <div class="d-flex align-items-center pt-3">
+              <p id="content" class="m-0 pb-1 address">
+                3 UK CTR NCC, IIT Roorkee Roorkee, Haridwar Uttarakhand, 247667
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Webiste:
+            </div>
+            <i class="fa fa-plus" onclick="footer('website_content',this)"></i>
+          </div>
+          <div id="website_content">
+            <div class="d-flex align-items-center pt-3">
+              <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+              <div class="px-3">
+                <a href="https://indiancc.nic.in/" target="_blank" id="content" class="text-decoration-none ncc-white">
+                  NCC Official
+                </a>
+              </div>
+            </div>
+            <div class="d-flex align-items-center pt-3">
+              <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+              <div class="px-3">
+                <a href="https://www.iitr.ac.in/" target="_blank" id="content" class="m-0 pb-1">
+                  IIT Roorkee
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-evenly pt-1 pb-2">
+          <a target="_blank" id="logo1" href="https://www.facebook.com/ncc.iitr"><img src="images/svgs/facebookIcon.svg"
+              class="mx-2" /></a>
+          <a target="_blank" id="logo2" href="https://www.youtube.com/channel/UCrx5OBkbdv5dldJBDXFfJbA"><img
+              src="images/svgs/youtubeIcon.svg" class="mx-2" /></a>
+          <a target="_blank" id="logo3" href="https://www.instagram.com/ncc.iitr/"><img src="images/svgs/instagram.png"
+              class="mx-2" width="44px" height="44px" /></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="d-flex align-items-center text-center justify-content-center ncc-bg-copyright footer-copyright ncc-16 ncc-white py-2"
+    id="content">©
+    Copyright 2021 - NCC IIT Roorkee | All Right Reserved
+  </p>
+
+  <!-- Footer Ends -->
+  <!-- ---Bootstrap Js link---  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

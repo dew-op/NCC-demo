@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <!-- ----Favicon----- -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Bootstrap CSS CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- ----hamburgers.min.css--- -->
+  <link rel="stylesheet" href="./css/hamburgers.min.css">
+  <!-- Custom CSS Link  -->
+  <link rel="stylesheet" href="./css/events.css">
+  <link rel="stylesheet" href="./css/globalStyle.css">
+  <link rel="stylesheet" href="./css/nav&footer.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body onload="load()">
+  <div id="loading">
+  </div> 
+  <!-- -----------NavBar Start---------- -->
+  <div class="fixed-top">
+    <div class="container-fluid navBar">
+      <div class="row ncc-navBar">
+        <div class="NCC-Logo">
+          <a href="./index.html">
+            <img src="./images/NCC Logo.png" alt="NCC Logo" class="ncc_shrink" id="NCC-Logo" />
+          </a>
+        </div>
+        <div class="col-10 navbar_shrink" style="width: 85%"; id="navbar_links">
+          <nav class="navbar navbar-expand-lg navbar-dark navLinks py-0 box">
+            <div class="container p-0 m-0">
+              <div class="navbar-collapse">
+                <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./aboutUs.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./events.html">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./allBlog.html">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./FAQs.html">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./annualReport.html">Annual Reports</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="IITR-Logo ">
+          <a href="https://iitr.ac.in/"><img src="./images/IITR Logo.png" alt="IITR logo" class="iitr_shrink" id="IITR-Logo" /></a>
+        </div>
+        <div class="toggle-icon d-none navItem">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box ">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark navLinks py-0 box" id="nav-mb">
+      <div class="container">
+        <div class="navbar-collapse">
+          <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutUs.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./allBlog.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./FAQs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./annualReport.html">Annual Reports</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- -----------NavBar End---------- -->
+  <!--upcoming events-->
+
+  <div class="section-heading text-center d-flex align-items-center justify-content-around py-3" style="margin-top: 82px;">
+    <div class="line"></div>
+    <p class="heading">Recent Events</p>
+    <div class="line"></div>
+  </div>
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+    <div class="carousel-indicators ncc-bg-green-1">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 2"></button>
+    </div>
+    <!-- The carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/trdd.png" alt="events" class="d-block" data-bs-toggle="modal"
+          data-bs-target="#exampleModal" onclick="changeCarouselInterval()">
+        <!-- <div class="block">
+          <p id="date">Date & Time - 26-01-2022</p>
+          <p id="place">Place - IIT Roorkee </p>
+          <br>
+          <p id="last_date">Last date of registration - 25-01-2022</p>
+        </div> -->
+      </div>
+      <div class="carousel-item">
+        <img src="./images/vfl.png" alt="events" class="d-block" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2" onclick="changeCarouselInterval()">
+
+        <!-- <div class="block">
+          <p id="date">Date & Time - 15-08-2022</p>
+          <p id="place">Place - IITR</p>
+          <br>
+          <p id="last_date">Last date of registration - 14-08-2021</p>
+        </div> -->
+      </div>
+      <div class="carousel-item">
+        <img src="./images/fc.png" alt="events" class="d-block" data-bs-toggle="modal"
+          data-bs-target="#exampleModal3" onclick="changeCarouselInterval()">
+        <!-- <div class="block">
+          <p id="date">Date & Time - 02-10-2022</p>
+          <p id="place">Place - IITR</p>
+          <br>
+          <p id="last_date">Last date of registration - 02-10-2022</p>
+        </div> -->
+      </div>
+    </div>
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- -----MODALS------ -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center"  >
+                <img src="./images/trdd.png" alt="events" class="d-block" style="width:100%; margin:0px; padding: 0px; border-radius: 0;"
+                  class="imga" >
+              </div>
+              <!-- <div class="col-6 modal-event">
+                <p class="text-center event-name">Yoga Sadna</p>
+                <p class="text-center event-des" style="padding: 13px;">Yoga is the journey of the self, through the self, to the self. To give a mirror to look at from within, NCC IIT Roorkee organized Yoga Sadhna, a mass yoga event at LBS Stadium. The event saw a huge participation of nearly 1200 participation from the IIT R community. T-shirts and refreshments were given. The chief guest of the occasion was the Deputy Director of IIT Roorkee, Dr Manoranjan Parida.</p>
+                <p class="event-details">Date & Time - 17-04-2022, 5:30 AM</p>
+                <p class="event-details">Venue - LBS Stadium</p>
+              </div> -->
+              <div class="col-6 modal-event">
+                <p class="text-center event-name">Guard of Honour</p>
+                <p class="text-center event-des" style="padding: 13px;">This year's Independence day was special, as we were celebrating 75 years of independence. This special occasion implored for a grand celebration. Being a part of the celebration, NCC IIT Roorkee organised various events to commemorate the occasion. NCC's guard of honour, which has always been the centre of attraction of The Independence day, graced the event. NCC also conducted a seminar on "Partition Horrors Remembrance", which took us back to the dreadful days of partition.</p>
+                <p class="event-details">Date & Time - 15-08-2022, 9:00 AM</p>
+                <p class="event-details">Venue - LBS Stadium</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center" >
+                <img src="./images/vfl.png" alt="events" class="d-block" style="width:100%; margin:0px; padding: 0px; border-radius: 0; "
+                  class="imga">
+              </div>
+              <!-- <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:3px">Blood Donation Camp</p>
+                <p class="text-center event-des">Blood Donation is a noble cause. Keeping this in mind, NCC in collaboration with NSS IIT Roorkee, conducted a blood donation camp. Maa Ganga Blood Centre, IMA Dehradun and Mother Teresa Blood Bank were invited. The combined collection was nearly 850+ units. Mr Suresh Kumar Saini, a world record holder in the number of times he has donated blood graced the occasion as the chief guest of the occasion.</p>
+                <p class="event-details">Date - 07-04-2022</p>
+                <p class="event-details">Venue - SAC, 1st Floor</p>
+              </div> -->
+              <div class="col-6 modal-event">
+                <p class="text-center event-name">Vocal for Local</p>
+                <p class="text-center event-des" style="padding: 30px;">Today is a historic day with regard to the freedom struggle. It was the day when people from all parts of India and from all religious groups, came to streets, demanding poorna swaraj and complete end of British rule. It was this campaign which shook the roots of British Empire and paved the way for swaraj(self-rule). On this significant occasion, NCC organised a 'Vocal for Local' rally across the IITR campus celebrating this remarkable event and also creating awareness about 'Vocal for Local' as in today's world self dependency in true swaraj.</p>
+                <p class="event-details">Date - 09-08-2022</p>
+                <p class="event-details">Venue - IITR Campus</p>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center" >
+                <img src="./images/fc.png" alt="events" class="d-block" style="width:100%; margin:0px; padding: 0px; border-radius: 0;"
+                  class="imga">
+              </div>
+              <!-- <div class="col-6 modal-event">
+                <p class="text-center event-name">Freshers' marathon</p>
+                <p class="text-center event-des" style="padding: 30px;">NCC IIT Roorkee is organizing a 'Freshers marathon' for all IITR students on 5th February 2022. The marathon would be 5 KM for both boys and girls. We have a cash prize of ₹6000, and the top 5 runners will get T-Shirts and there are Certificates of participation for all those who complete the marathon.</p>
+                <p class="event-details">Date - 05-02-2022</p>
+                <p class="event-details">Venue - Anywhere</p>
+              </div> -->
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:3px">BEG Visit</p>
+                <p class="text-center event-des">NCC IIT Roorkee had conducted a visit to one of the oldest regiments in the Indian military, the Bengal Sappers, which is stationed in Roorkee and is trained by the Bengal Engineers Group (BEG). This visit was full of pride and ardour as the students got an opportunity to experience how our warriors train with fervour. They were made to have a tour of the military school, army labs, regiment parade ground, where they witnessed the daily procession of the army unit. They were exhibited many military weapons and tanks. NCC also paid a visit to the the regiment's war memorial, where the anecdotes of many brave soldiers were portrayed.</p>
+                <p class="event-details">Date - 06-08-2022</p>
+                <p class="event-details">Venue - BEG, Roorkee</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -------PAST EVENTS SECTION----- -->
+  <div class="section-heading text-center d-flex align-items-center justify-content-around py-3">
+    <div class="line"></div>
+    <p class="heading">Past Events</p>
+    <div class="line"></div>
+  </div>
+  <div class="recom">
+    <div class="carousel-container">
+      <div class="carousel-inner">
+        <div class="track">
+
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/yoga.jpg" alt="" style="width: 100%;border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp9"></a></div>
+            </div>
+          </div>   
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/bdc.jpeg" alt="" style="width: 100%;border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp8"></a></div>
+            </div>
+          </div>   
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/marathon.jpg" alt="" style="width: 100%;border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp7"></a></div>
+            </div>
+          </div>   
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/quiz.jpg" alt="" style="width: 100%;border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp6"></a></div>
+            </div>
+          </div>   
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/hd.png" alt="" style="width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp5"></a></div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/Run.jpg" alt="" style="width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp4"></a></div>
+            </div>  
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/KVDquiz.png" alt="" style="width: 100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp2"></a></div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/Pentathlon.png" alt="" style="width: 100%;border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp3"></a></div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="img"><img src="./images/GenSD-Webinar1.jpg" alt="" style="width:100%; border-radius: 10px;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalp1"></a></div>
+            </div>
+          </div>
+                 
+        </div>
+      </div>
+      <div class="nav">
+        <button class="prev">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="next">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modals past events -->
+  <div class="modal fade" id="exampleModalp1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/GenSD-Webinar1.jpg" alt="events" style="width: 100%; ">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:10px; font-size: 30px; line-height: 35px;">Bravest of the brave: The Indian Army</p>
+                <p class="text-center event-des" style="padding-top: 0px; margin: 0px; font-size: 15px;">
+                  NCC IIT Roorkee brings to you the first webinar of a series of events, on the topic ‘Bravest of the Brave: The Indian Army’. Our speaker for the event, a very eminent personality, is Lt. Gen. Satish Dua, PVSM, UYSM, SM, VSM(R), and during the webinar, he will talk about his experiences in the Army during 4 decades of his service. The webinar will be an opportunity for all those enthusiastic about the Indian Army to know more about the IA, and life in the IA, and motivate those who are willing to don the uniform.
+                </p>
+                <p class="event-details" style="padding-top: 20px; font-size: 15px;">Date & Time - 07-02-2021</p>
+                <p class="event-details" style="font-size: 15px;">Venue - Online</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/KVDQwinners.png" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Kargil Vijay Diwas Quiz</p>
+                <p class="text-center event-des" style="padding-top: 30px; font-size: 15px;">
+                  Winner <br>
+                  1st : Mr. Ayush Agrawal <br>
+                  2nd : Mr. Rohan Kumar<br>
+                  3rd : Mr. Suraj Sharma<br>
+                </p>
+                <p class="event-details" style="padding-top: 40px; font-size: 15px;">Date & Time - 15-08-2021</p>
+                <p class="event-details" style="font-size: 15px;">Venue - IIT Roorkee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/pentathlonwinners.png" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:15px;">Pentathlon</p>
+                <p class="text-center event-des" style="padding-top: 10px; font-size: 15px;">
+                  Winners <br>
+                  Refer the poster.
+                </p>
+                <p class="event-details" style="padding-top: 15px; font-size: 15px;">Date & Time -
+                <ul style="font-size: 15px; padding-left: 80px; margin: 0px;">
+                  <li> 26-07-2021</li>
+                  <smallbr>
+                    <li>31-07-2021</li>
+                    <smallbr>
+                      <li>1-08-2021</li>
+                      <smallbr>
+                        <li>07-08-2021</li>
+                        <smallbr>
+                          <li>08-08-2021</li>
+                          <smallbr>
+                </ul> At 6pm each day.</p>
+                <p class="event-details" style="font-size: 15px;">Venue - </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/Run.jpg" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Run for the Nation</p>
+                <p class="text-center event-des" style="padding-top: 10px;">
+                  Celebrating Azadi Ka Amrit Mahotsav, NCC IIT ROORKEE is overjoyed to announce the Freedom Day Run. NCC has always stressed the importance of physical fitness and well-being. This 15th August, get ready to free yourself from chains of lethargy and procrastination. Being physically fit is a boon you can give to yourself; being fit not only helps your physical well-being but also develops a healthy mind.
+                </p>
+                <p class="event-details" style="padding-top: 10px; font-size: 15px;">Date & Time - 15-08-2021, 9 PM</p>
+                <p class="event-details" style="font-size: 15px;">Venue - Anywhere</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/hd.png" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Hindi Diwas</p>
+                <p class="text-center event-des" style="padding-top: 30px;">
+                  प्रत्येक वर्ष 14  सितम्बर को  हिंदी दिवस मनाया जाता है। इस दिन ही भारत की संविधान सभा ने हिंदी को भारत गणराज्य की आधिकारिक भाषा घोषित किया था। इस हिंदी दिवस पर एन. सी. सी आई. आई. टी. रुड़की आप सभी के लिए एक हिंदी वाचन प्रतियोगिता प्रस्तुत कर रहा है।
+                </p>
+                <p class="event-details" style="padding-top: 70px; font-size: 15px;">Date - 12-09-2021</p>
+                <p class="event-details" style="font-size: 15px;">Venue - Online</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/quiz.jpg" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Quizzard</p>
+                <p class="text-center event-des" style="padding-top: 10px;">
+                  On 26th January 2022, NCC IIT Roorkee celebrates the 73rd Republic Day of India with much enthusiasm and heartfelt gratitude to the heroic sons of Mother India whose ceaseless determination and unending valor lead to the transformation of the country into a sovereign nation. It is a day to celebrate the essence of liberty, pay homage to our constitution and help India accomplish its freedom fighters' dreams.
+                </p>
+                <p class="event-details">Date & Time - 26-01-2022, 9 PM</p>
+                <p class="event-details">Venue - D2C</p>
+                <p class="event-details">Last date of registration - 26-01-2022, 8 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/marathon.jpg" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Fresher's Marathon</p>
+                <p class="text-center event-des" style="padding-top: 10px;">
+                  NCC IIT Roorkee is organizing a 'Freshers marathon' for all IITR students on 5th February 2022. The marathon would be 5 KM for both boys and girls. We have a cash prize of ₹6000, and the top 5 runners will get T-Shirts and there are Certificates of participation for all those who complete the marathon.
+                </p>
+                <p class="event-details">Date - 05-02-2022</p>
+                <p class="event-details">Venue - Anywhere</p>
+                <p class="event-details">Last date of registration - 04-02-2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalp8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/bdc.jpeg" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Blood Donation Camp</p>
+                <p class="text-center event-des" style="padding-top: 10px;">
+                  Blood Donation is a noble cause. Keeping this in mind, NCC in collaboration with NSS IIT Roorkee, conducted a blood donation camp. Maa Ganga Blood Centre, IMA Dehradun and Mother Teresa Blood Bank were invited. The combined collection was nearly 850+ units. Mr Suresh Kumar Saini, a world record holder in the number of times he has donated blood graced the occasion as the chief guest of the occasion.
+                </p>
+                <p class="event-details">Date - 07-04-2022</p>
+                <p class="event-details">Venue - SAC, 1st Floor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalp9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="container-fluid p-0">
+            <div class="row d-flex modal-box m-0">
+              <div class="col-6 px-0 align-self-center">
+                <img src="./images/yoga.jpg" alt="events" style="width:100%" class="imga">
+              </div>
+              <div class="col-6 modal-event">
+                <p class="text-center event-name" style="padding-top:20px;">Yoga Sadna</p>
+                <p class="text-center event-des" style="padding-top: 10px;">
+                  Yoga is the journey of the self, through the self, to the self. To give a mirror to look at from within, NCC IIT Roorkee organized Yoga Sadhna, a mass yoga event at LBS Stadium. The event saw a huge participation of nearly 1200 participation from the IIT R community. T-shirts and refreshments were given. The chief guest of the occasion was the Deputy Director of IIT Roorkee, Dr Manoranjan Parida.
+                </p>
+                <p class="event-details">Date & Time - 17-04-2022, 5:30 AM</p>
+                <p class="event-details">Venue - LBS Stadium</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Footer Starts -->
+  <div class="ncc-bg-blue ncc-white">
+    <div class="row mx-0 ">
+
+      <!-- Normal Footer -->
+
+      <div class="py-2 d-flex justify-content-between footerResponsive text-left">
+        <div class="d-flex flex-column text-left  px-2 element px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Contact Us:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <img src="images/svgs/phoneIcon.svg" />
+            <div class="px-2">
+              <p id="content" class="m-0 pb-1">
+                +91 7070091863
+                
+              </p>
+              <p id="content" class="pb-1 m-0">
+                +91 8449643710
+                
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center pt-2">
+            <img src="images/svgs/emailIcon.svg" />
+            <div class="px-3">
+              <p id="content" class="m-0 pb-1">
+                <a href="mailto:ncc@iitr.ac.in" class=" text-white text-decoration-none">ncc@iitr.ac.in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left   px-2element  px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Social Media:
+          </span>
+          <div class="d-flex align-items-center justify-content-between pt-4">
+            <a target="_blank" id="logo1" href="https://www.facebook.com/ncc.iitr"><img
+                src="images/svgs/facebookIcon.svg" class="me-2" /></a>
+            <a target="_blank" id="logo2" href="https://www.youtube.com/channel/UCrx5OBkbdv5dldJBDXFfJbA"><img
+                src="images/svgs/youtubeIcon.svg" class="me-2" /></a>
+            <a target="_blank" id="logo3" href="https://www.instagram.com/ncc.iitr/"><img
+                src="images/svgs/instagram.png" class="me-2" width="44px" height="44px" /></a>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left ele  px-2ment iit px-lg-4">
+          <span id="title_footer" class="pb-1">
+            Website:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+            <div>
+              <a href="https://indiancc.nic.in/" target="_blank" id="content" class="text-decoration-none text-white">
+                NCC Official
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center pt-2">
+            <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+            <div>
+              <a href="https://www.iitr.ac.in/" target="_blank" id="content" class="m-0 pb-1">
+                IIT Roorkee
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="d-flex flex-column text-left element ">
+          <span id="title_footer" class="pb-1">
+            Address:
+          </span>
+          <div class="d-flex align-items-center pt-2">
+            <p id="content" class="m-0 pb-1 address">
+              3 UK CTR NCC, IIT Roorkee Roorkee, Haridwar Uttarakhand, 247667
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Footer -->
+
+      <div class="py-2 d-flex flex-column footerResponsive1 text-left">
+        <div id="footer_heading" class="d-flex flex-column text-left px-4 element">
+          <h2>National Cadet Corps</h2>
+          <h4>IIT Roorkee</h4>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Contact Us:
+            </div>
+            <i class="fa fa-plus" onclick="footer('contact_content',this)"></i>
+          </div>
+          <div id="contact_content">
+            <div class="d-flex align-items-center pt-3">
+              <img src="images/svgs/phoneIcon.svg" />
+              <div class="px-2">
+                <p id="content" class="m-0 pb-1">
+                  +91 9302286449
+                </p>
+                <p id="content" class="pb-1 m-0">
+                  +91 8178818593
+                </p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center pt-2">
+              <img src="images/svgs/emailIcon.svg" />
+              <div class="px-3">
+                <p id="content" class="m-0 pb-1">
+                  <a href="mailto:ncc@iitr.ac.in" class="text-white text-decoration-none">ncc@iitr.ac.in</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Address:
+            </div>
+            <i class="fa fa-plus" onclick="footer('address_content',this)"></i>
+          </div>
+          <div id="address_content">
+            <div class="d-flex align-items-center pt-3">
+              <p id="content" class="m-0 pb-1 address">
+                3 UK CTR NCC, IIT Roorkee Roorkee, Haridwar Uttarakhand, 247667
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-left px-4 element">
+          <div id="title_footer" class="d-flex justify-content-between align-items-center">
+            <div class="pb-1">
+              Webiste:
+            </div>
+            <i class="fa fa-plus" onclick="footer('website_content',this)"></i>
+          </div>
+          <div id="website_content">
+            <div class="d-flex align-items-center pt-3">
+              <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+              <div class="px-3">
+                <a href="https://indiancc.nic.in/" target="_blank" id="content" class="text-decoration-none ncc-white">
+                  NCC Official
+                </a>
+              </div>
+            </div>
+            <div class="d-flex align-items-center pt-3">
+              <!-- <img src="images/svgs/websiteIcon.svg" /> -->
+              <div class="px-3">
+                <a href="https://www.iitr.ac.in/" target="_blank" id="content" class="m-0 pb-1">
+                  IIT Roorkee
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-evenly pt-1 pb-2">
+          <a target="_blank" id="logo1" href="https://www.facebook.com/ncc.iitr"><img src="images/svgs/facebookIcon.svg"
+              class="mx-2" /></a>
+          <a target="_blank" id="logo2" href="https://www.youtube.com/channel/UCrx5OBkbdv5dldJBDXFfJbA"><img
+              src="images/svgs/youtubeIcon.svg" class="mx-2" /></a>
+          <a target="_blank" id="logo3" href="https://www.instagram.com/ncc.iitr/"><img src="images/svgs/instagram.png"
+              class="mx-2" width="44px" height="44px" /></a>
+              <a target="_blank" id="logo4" href="https://goo.gl/maps/73UGFeqZSd5HjjZP9"><img
+                src="images/svgs/maps.png" class="me-2" width="44px" height="44px" /></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="d-flex align-items-center text-center justify-content-center ncc-bg-copyright footer-copyright ncc-16 ncc-white py-2"
+    id="content">©
+    Copyright 2021 - NCC IIT Roorkee | All Right Reserved
+  </p>
+
+  <!-- Footer Ends -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="./index2.js"></script>
+  <script src="./blogsnew.js"></script>
+
+</body>
+
+</html>

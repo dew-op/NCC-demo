@@ -1,0 +1,129 @@
+.blog{
+  margin-top: 100px;
+}
+.image{
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 82%;
+  border-style: solid;
+  border-radius: 15px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.text{
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 82%;
+  font-family:'Lato', sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: justify;
+  color: #053D4D;
+}
+.recom{
+  display: block;
+  margin-left: 8%;
+  margin-right: 10%;
+  
+}
+.track{
+  justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.carousel-container {
+  width: 100%;
+  margin: 50px auto;
+  min-height: 200px;
+  position: relative;
+}
+
+.carousel-container .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container .track {
+  width: 100%;
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container .card-container {
+  width: 25%;
+  flex-shrink: 0;
+  height: 250px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.carousel-container .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.nav button {
+  border: 0;
+  background-color: #F3F9FF;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.nav button i{
+  font-size: 30px;
+}
+.nav .prev {
+  left: -40px;
+  display: none;
+}
+.nav .prev.show {
+  display: block;
+}
+.nav .next {
+  right: -40px;
+}
+.nav .next.hide {
+  display: none;
+}
+
+.card > * {
+  flex: 1;
+}
+.card .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.card .info {
+  flex-basis: 40px;
+  background:#222588;
+  ;
+  color: #ffffff;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 992px){
+  .carousel-container .card-container {
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 720px){
+  .carousel-container .card-container {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 320px){
+  .carousel-container .card-container {
+    width: 100%;
+  }
+  .text{
+    font-size: 16px;
+  }
+}
