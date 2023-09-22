@@ -1,6 +1,7 @@
 const view_width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const removeBg1 = document.querySelector("#pills-ADMINISTRATION-tab");
 const removeBg2 = document.querySelector("#pills-2021-2022-tab");
+const removeBg3 = document.querySelector("#pills-2022-2023-tab");
 const removeIndic = document.querySelector('#activityCarousel2 .carousel-indicators')
 console.log(removeIndic);
 var i = 1;
@@ -9,6 +10,7 @@ if(view_width<="760"){
     removeIndic.style.display="none";
     removeBg1.classList.remove("active");
     removeBg2.classList.remove("active");
+    removeBg3.classList.remove("active");
 }
 team = (id) => {
     if(view_width<="760"){
